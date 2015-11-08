@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="exnessTestApp" ng-strict-di>
+<head>
+	<meta charset="UTF-8">
+	<title>Test task 1</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="lib/angular.1.5.0-beta.1.min.js"></script>
+	<script src="lib/angular-touch.1.5.0-beta.1.min.js"></script>
+</head>
+<body>
+	<div ng-controller="ExnessCurrencyController" ng-cloak>
+	<div ng-show="loaded">
+		<form novalidate ng-if="loaded">
+			<div class="exness-select-wrapper" data-exness-select ng-model="pair.currency1" data-list="currency1_list" ng-change="filterList()">
+			</div>
+			<div class="exness-select-wrapper" data-exness-select ng-model="pair.currency2" data-list="currency2_list" ng-change="filterList()" ng-show="isVisible">
+			</div>
+			<br>		
+			<input type="submit" ng-click="filterList()">
+		</form>
+		<br>
+		<br>
+		<table border="1" cellpadding="10" cellspacing="0">
+            <thead align="left">
+	            <tr>
+	                <th>Name</th>
+	                <th>Bid</th>
+	                <th>Ask</th>
+	                <th>Spread</th>
+	                <th>Move</th>
+	            </tr>
+            </thead>
+            <tbody>
+	            <tr ng-repeat="quote in quotes | filter:query">
+	                <td>{{quote.name}}</td>
+	                <td>{{quote.bid}}</td>
+	                <td>{{quote.ask}}</td>
+	                <td>{{quote.spread}}</td>
+	                <td>{{quote.move}}</td>
+	            </tr>
+            </tbody>
+        </table>
+    </div>
+	</div>
+	<script src="js/app.js"></script>
+	<script src="js/controller.js"></script>
+	<script src="js/directive.js"></script>
+</body>
+</html>

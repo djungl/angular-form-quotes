@@ -1,0 +1,90 @@
+body {
+    font-family: Circe, Arial, sans-serif;
+}
+
+.exness-select-wrapper {
+    padding: 0px 20px 20px 0px;
+    display: inline-block;
+    height: 60px;
+    width: 510px;
+}
+
+
+/*Exness selector styles*/ 
+
+.exness-selector {
+    position: absolute;
+    display: inline-block;
+    outline: 3px;
+}
+
+.exness-selector:focus {
+    outline: 0px;
+}
+
+.exness-selector--expanded {
+    z-index:999;
+}
+
+.exness-selector-value {
+    border: 1px solid #ccc;
+}
+
+.exness-selector-value:hover {
+    outline: 2px solid #000;
+}
+
+.exness-selector__item {
+    padding-left: 20px;
+    width: 480px;
+    height: 60px;
+    vertical-align: middle;
+    line-height: 60px;
+    border-radius: 0px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #fff;
+}
+
+.exness-selector__icon-dropdown {
+    background-image: url(../img/arrow_down.png);
+    width:12px; 
+    height:7px;
+    display: inline-block;
+}
+
+.exness-selector__button_dropdown {
+    float: right;
+    width: 60px;
+    height: 60px;
+    border-left: 1px solid #ccc;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 60px;
+}
+
+.exness-selector-dropdown {
+    outline: 2px solid #000;
+}
+
+.exness-selector-dropdown__item {
+    border-top: 1px solid #ccc;
+}
+
+.exness-selector-dropdown__item--selected {
+    color: #ddd;
+}
+
+.exness-selector-dropdown__selected_item_marker {
+    float: right;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 60px;
+    color: #000;
+}
+
+
+
+

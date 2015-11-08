@@ -1,0 +1,7 @@
+<div class="exness-selector" ng-click="expand()" ng-class="{'exness-selector--expanded': expanded}">
+	<div class="exness-selector-value exness-selector__item" ng-hide="expanded" >{{ selection }}<div class="exness-selector__button_dropdown"><span class="exness-selector__icon-dropdown"></span></div>
+	</div>
+	<div class="exness-selector-dropdown" ng-show="expanded" >
+		<div class="exness-selector__item exness-selector-dropdown__item" ng-class="{'exness-selector-dropdown__item--selected': selected(option)}" ng-repeat="option in options" ng-click="select_option(option)">{{ option }}<span ng-show="selected(option)" class="exness-selector-dropdown__selected_item_marker">✓</span></div>
+	</div>
+</div> 

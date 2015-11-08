@@ -1,0 +1,17 @@
+{
+    "currency1_list": {
+        "list": [
+            "EUR",
+            "USD",
+            "All"
+        ],
+        "default": "All"
+    },
+    "currency2_list": {
+        "list": [
+            "USD",
+            "GBP"
+        ],
+        "default": "GBP"
+    }
+}
